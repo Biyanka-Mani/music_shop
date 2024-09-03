@@ -1,24 +1,20 @@
-# README
+# Music Shop App 🎵
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails application that simulates a music shop, where users can browse and purchase albums. The app also demonstrates the usage of the `acts_as_paranoid` gem for soft deletion and the `gretel` gem for breadcrumbs navigation.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- **Album Management:** Create, read, update, and soft-delete albums.
+- **Artist Management:** Manage artists associated with albums.
+- **Soft Deletion:** Implemented using the `acts_as_paranoid` gem, allowing albums to be "deleted" but still recoverable.
+- **Breadcrumb Navigation:** Enhanced user navigation with breadcrumbs, powered by the `gretel` gem.
 
-* System dependencies
+## Gems Used
 
-* Configuration
+### `acts_as_paranoid`
+The `acts_as_paranoid` gem is used to implement soft deletion in the application. When a record is "deleted," it is not actually removed from the database but is instead marked as deleted by setting a `deleted_at` timestamp. This allows the record to be restored later if needed.
 
-* Database creation
+- **Installation:** Add the gem to your `Gemfile`:
+  ```ruby
+  gem 'acts_as_paranoid'
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
